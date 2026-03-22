@@ -1,0 +1,494 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+nav{
+    background-color: rgba(0,0,0,0.1);
+    display: flex;/* it converts the block elements to inline elements or side by side*/
+    justify-content: space-between; /* It provides space btw elements of nav tag*/
+    align-items: center; /*all the elements inside the nav tag comes vertically center*/
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+}
+.navlinks ul{
+    display: flex;
+    list-style: none;/*remove bullets*/
+    gap: 2rem;        /* 1rem=16px */
+}
+a{
+    text-decoration: none; /* Remove underlines*/
+    color: white;
+}
+.header-home{
+    background: url(./knightimages/app-link-background.svg) no-repeat center/cover;
+    height: 100vh; /*viewport height=full screen */
+    color: white;
+    text-align: center;
+    align-content: center;/* page center*/
+    h1{
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+    }
+    #ios-store{
+        height: 3.5rem;
+    }
+    .store-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;/* fix horizontally same side by side-----it posible only flex present*/
+        gap: 2rem;/* give horizontal gap btw 2 images or items*/
+    }
+}
+/* Home page feature section code*/
+.features{
+    text-align: center;
+    min-height: 100vh;
+    align-content:center ;
+    padding: 0 2rem; /*for space for topbottom leftright*/
+
+    h1{
+        font-size:  4.5rem ;
+        margin-bottom: 5rem;
+    }
+.inner-features{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+}
+}
+/*banner1*/
+.banner1{
+    background:url(./knightimages/banner-1.webp)no-repeat center/cover;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+    h1{
+        font-size: 4.5rem;
+        color: white;
+    }
+}
+/*banner2*/
+.banner2{
+    background:url(./knightimages/banner-2.webp)no-repeat center/cover;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+    padding: 0 4rem;
+    h1{
+        font-size: 4.5rem;
+        color: white;
+    }
+    button{
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+        padding: 1rem 2rem ;
+        border-radius: 30px;
+        font-size: 1rem;
+    }
+}
+/*footer-home*/
+.footer-home{
+    min-height: 100vh;
+    align-content: center;
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        padding:3rem;
+    }
+    .footer-main{
+        display: grid;
+        grid-template-columns:1fr 1fr 2fr; /* fraction space for columns*/
+        gap: 3rem;
+        justify-content: center;
+        padding: 0 3rem;
+        line-height: 2rem;
+        font-size: 1.2rem;
+    }
+    a{
+        color: black;
+    }
+    .ss{
+        display: flex;
+        gap: 1rem;
+    }
+    .ss img{
+        height: 1.5rem;
+    }
+    .p{
+        font-size: 1rem;
+    }
+    .social-icons ul{
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+    h3{
+        margin-bottom: 1rem;
+    }
+    .send-mail input{
+        padding: 1rem 2rem;
+        width: 100%;
+        border-radius: 1rem;
+        border:1px solid grey;
+    }
+    .send-mail img{
+        height: 3rem;
+        position: absolute;
+        right: 0px;
+    }
+    .send-mail{
+        position: relative;
+        width: 60%;
+        padding: 1rem;
+    }
+    .footer-logos{
+        text-align:center;
+        margin: 1rem 0;
+    }
+    .footer-end{
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        background:linear-gradient(to right,violet,hotpink) ;
+        padding: .5rem;
+    }
+}
+/* home page mobile responsive code*/
+@media(min-width: 1px) and (max-width:576px){
+    .logo img{
+        height: 3rem;
+    }
+    nav{
+        flex-direction: column;
+        gap: 2rem;
+
+        .navlinks{
+            font-size: 1.2rem;
+        }
+    }
+    .features{
+        padding: 3rem;
+    }
+    .inner-features{
+        flex-direction: column;
+    }
+    .footer-home{
+        .footer-main{
+            grid-template-columns: 1fr;
+            h3{
+                font-size: 2rem;
+            }
+            .send-mail{
+                width: 100%;
+            }
+    }
+}
+}
+/* About page */
+.aboutmain{
+    background: url(./knightimages/banner.webp) center/cover;
+    height: 100vh ;
+    padding: 2rem;
+}
+    .left{
+    color: white;
+    text-align:left;
+    font-size: 4rem;
+    max-width: 700px;
+    padding: 1rem;
+    padding-top: 8rem;
+    }
+    .d1{
+        display: flex;
+        padding: 7rem;
+        gap: 10rem;
+        font-size: 1.5rem;
+        width: 100rem;
+    img{
+        height: 6rem;
+        padding-left: 5rem;
+    }
+}
+    .d2{
+        display: flex;
+        padding: 5rem;
+        gap: 5rem;
+        font-size: 1.5rem;
+        width: 100rem;
+        padding-top: 0rem;
+        align-items: center;
+    img{
+        height: 27rem;
+    }
+}
+.d3{
+        display: flex;
+        padding: 5rem;
+        gap: 5rem;
+        font-size: 1.5rem;
+        width: 100rem;
+        align-items: center;
+    img{
+        height: 27rem;
+    
+    }   
+    }
+    .footerabout{
+        display: flex;
+        font-size: 1.5rem;
+        gap: 15rem;
+        padding: 5rem;
+        text-align: center;
+        margin-bottom:20rem;
+        line-height: 1.5;
+        h3{
+            margin-bottom: 2rem;
+        }
+    }
+
+@media (min-width:1px) and (max-width:576px){
+    header{
+        padding: 5rem 2rem;
+    }
+    .d1{
+        flex-direction: column;
+        gap: 1rem;
+        width:30rem;
+        text-align: left;
+        padding-left: 0rem;
+        img{
+            width: 30rem;
+            padding-left: 1rem;
+        }
+
+    }
+    .d2{
+        flex-direction: column;
+        gap: 2rem;
+        width:30rem;
+        text-align: left;
+        padding-left: 0rem;
+        img{
+            width: 30rem;
+        }
+    }
+    .d3{
+        flex-direction: column;
+        gap: 2rem;
+        width:30rem;
+        text-align: left;
+        padding-left: 0rem;
+        img{
+            width: 25rem;
+        }
+    }
+    
+    .footer-end{
+        padding-top: 1rem;
+
+}
+}
+/*Menu Page*/
+.menu-main{
+    background: url(./knightimages/bannermenu.webp) no-repeat center/cover;
+    height: 100vh ;
+    padding: 2rem;
+    display: grid;
+        grid-template-columns:2fr 2fr 2fr; /* fraction space for columns*/
+        gap: 5rem;
+        justify-content: center;
+        text-align: center;
+        padding: 8rem;
+        line-height: 2rem;
+        color: white;
+        font-size: 1.5rem;
+        .i1{
+            height:8rem;
+            width: 7rem;
+        }
+    }
+    .footer-menu{
+        .footer-end{
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        background:linear-gradient(to right,violet,hotpink) ;
+        padding: .5rem;
+    }
+}
+@media (min-width:1px) and (max-width:576px){
+    .menu-main{
+        grid-template-columns:2fr;
+        height: 130rem;
+    }
+
+    }
+
+/*Franchise Page*/
+ .franchise-header{
+    background:url(./knightimages/video-bg.png)no-repeat center/cover;
+    height: 100vh ;
+    padding: 2rem;
+    text-align: center;
+    align-content: center;
+    color: white;
+    h1{
+    font-size: 4.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    button{
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 1rem 2rem ;
+        margin-top: 4rem;
+        border-radius: 30px;
+        font-size: 1rem;
+    }
+    .watch{
+            text-align: center;
+            padding-top: 4rem;
+            font-size: 1.5rem;
+            
+         }
+     }
+
+     .mission{
+        text-align: center;
+        padding: 7rem;
+        padding-bottom: 3rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
+        .mm{
+            padding-top: 3rem;
+        }
+    }
+        .divisor{
+            background-color: purple;
+            height: 4px;
+            margin:5rem;
+            margin-top: 2rem;
+        }
+        h1{
+            text-align: center;
+        } 
+     .benefits{
+        display: flex;
+        align-content: center;
+        text-align: center;
+        gap: 3rem;
+        padding: 3rem;
+        margin-top: 2rem;    
+     }
+     .apply{
+        align-content: center;
+        text-align: center;
+        padding-top: 1rem;
+    }
+     .franchise-mid{
+        display: flex;
+        width: 100%;
+        .franchise-pic{
+        background: url(./knightimages/apply-grid.png)no-repeat center/cover;
+        height: 80vh ;
+        padding: 2rem;
+        width: 70%;
+     }        
+}
+    .field{
+        width: 100%;
+        background-color: lightgrey;
+        border-radius: 5%;
+        padding: 2rem;
+        padding-top:0rem;
+    }
+     .form{
+        display:flex;
+        flex-direction: column;
+        gap: 5rem;
+        width: 20rem;
+        padding: 2rem;
+        border-radius: 20px;
+        input,textarea{
+            padding: 1rem;
+            border-radius: 20px;
+            border:none;
+            width: 100%;
+            gap: 2rem;
+            margin-bottom: 25px;
+        }
+    
+        button{
+        background-color: red;
+        color: white;
+        border: none;
+        padding: .5rem 1rem ;
+        margin-top: 0rem;
+        margin-left:4rem;
+        border-radius: 30px;
+        font-size: 1rem;   
+    }
+
+    .checkbox{
+        font-size: 10px;
+        display: flex; 
+        text-align: left; 
+        gap: 8px;  
+        
+    }
+}  
+    
+
+.footer-franchise{
+    text-align: center;
+.foot{
+    display: flex;
+    margin-top: 2rem;
+    align-content: center;
+    gap: 10rem;
+    padding-left: 15rem;
+    margin-bottom: 3rem;
+    .ff{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img{
+            width: 3rem;
+        }
+    }
+}
+}
+ @media (min-width:1px) and (max-width:576px){
+    .franchise-header{
+        padding: 5rem 2rem;
+        
+    }
+    .benefits{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .apply{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .franchise-pic, .franchise-form{
+        width: 100%;
+    }
+    .footer-menu{
+        margin-top: 1rem;
+
+    }
+    .foot{
+        flex-direction: column;
+        padding-left:0rem;
+        padding-right:5rem;
+    }
+}
